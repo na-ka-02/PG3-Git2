@@ -1,4 +1,5 @@
 #include <Novice.h>
+#include"GameManager.h"
 
 const char kWindowTitle[] = "ナカムラ";
 
@@ -25,7 +26,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		/// ↓更新処理ここから
 		///
 
-
+		
 
 		///
 		/// ↑更新処理ここまで

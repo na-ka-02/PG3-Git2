@@ -12,7 +12,7 @@ public:
 	//継承先で実装される関数
 	//抽象クラスなので純粋仮想関数とする
 	virtual void Init() = 0;
-	virtual void Update() = 0;
+	virtual void Update(char*keys,char*preKeys) = 0;
 	virtual void Draw() = 0;
 
 	//仮想デストラクタを用意

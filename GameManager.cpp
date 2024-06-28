@@ -30,7 +30,7 @@ int GameManager::Run(char* keys, char* preKeys)
 		}
 
 		////更新処理
-		sceneArr_[currentSceneNo_]->Update();//シーンごとの更新処理
+		sceneArr_[currentSceneNo_]->Update(keys,preKeys);//シーンごとの更新処理
 
 		////描画処理
 		sceneArr_[currentSceneNo_]->Draw();
