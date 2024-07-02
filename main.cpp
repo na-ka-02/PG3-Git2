@@ -17,11 +17,10 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 	gameManager->Run(keys,preKeys);
 	
+	delete gameManager;
 
 	// ライブラリの終了
 	Novice::Finalize();
-
-	delete gameManager;
 
 	return 0;
 }

@@ -8,7 +8,7 @@ void ClearScene::Init()
 
 void ClearScene::Update(char*keys, char*preKeys)
 {
-	if (preKeys[DIK_RETURN] && keys[DIK_RETURN] == 0)
+	if (preKeys[DIK_RETURN] && keys[DIK_RETURN])
 	{
 		sceneNo = TITLE;
 	}
