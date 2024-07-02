@@ -17,4 +17,5 @@ void ClearScene::Update(char*keys, char*preKeys)
 void ClearScene::Draw()
 {
 	Novice::DrawBox(0, 0, 1280, 720, 0, BLACK, kFillModeSolid);
+	Novice::ScreenPrintf(0,0,"ClearScene");
 }

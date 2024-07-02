@@ -17,4 +17,5 @@ void StageScene::Update(char* keys, char* preKeys)
 void StageScene::Draw()
 {
 	Novice::DrawBox(0, 0, 1280, 720, 0, RED, kFillModeSolid);
+	Novice::ScreenPrintf(0, 0, "StageScene");
 }
