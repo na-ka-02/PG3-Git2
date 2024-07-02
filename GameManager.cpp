@@ -21,7 +21,11 @@ int GameManager::Run(char* keys, char* preKeys)
 {
 	while (Novice::ProcessMessage() == 0)
 	{
+		memcpy(preKeys, keys, 256);
+		Novice::GetHitKeyStateAll(keys);
+
 		Novice::BeginFrame();//フレームの開始
+
 		//シーンのチェック
 		prevSceneNo_ = currentSceneNo_;
 

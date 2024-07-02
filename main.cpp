@@ -10,13 +10,13 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	Novice::Initialize(kWindowTitle, 1280, 720);
 
 	// キー入力結果を受け取る箱
-	char keys[256] = {0};
-	char preKeys[256] = {0};
+	char keys[256] = { 0 };
+	char preKeys[256] = { 0 };
 
-	GameManager*gameManager=new GameManager();
+	GameManager* gameManager = new GameManager();
 
-	gameManager->Run(keys,preKeys);
-	
+	gameManager->Run(keys, preKeys);
+
 	delete gameManager;
 
 	// ライブラリの終了
