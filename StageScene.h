@@ -1,6 +1,9 @@
 ﻿#pragma once
 #include"IScene.h"
 #include"InputHandler.h"
+#include"StageSceneInputHandler.h"
+#include"Selector.h"
+#include"IStageSceneCommand.h"
 
 class StageScene :public IScene
 {
@@ -14,4 +17,8 @@ private:
 	InputHandler* inputHandler_ = nullptr;
 	ICommand* iCommand_ = nullptr;
 	Player* player_;
+
+	StageSceneInputHandler* stageSceneInputHandler_ = nullptr;
+	Selector* selector_ = nullptr;
+	IStageSceneCommand* command_ = nullptr;
 };

@@ -35,6 +35,20 @@ void StageScene::Update(char* keys, char* preKeys)
 	{
 		sceneNo = CLEAR;
 	}
+
+	//入力処理
+	//update key state
+	this->stageSceneInputHandler_->UpdateKeyState();
+
+	//get command Type
+	if(selector_->GetSelectMode()==SELECTOR)
+	{
+	this->command_= stageSceneInputHandler_->SelectorHandeleInput(this->selector_);
+	}
+	else if(selector_->GetSelectMode()== UNIT)
+	{
+	this->command_= stageSceneInputHandler_->UintHandleInput(selector_->)
+	}
 }
 
 void StageScene::Draw()
