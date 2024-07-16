@@ -41,13 +41,13 @@ void StageScene::Update(char* keys, char* preKeys)
 	this->stageSceneInputHandler_->UpdateKeyState();
 
 	//get command Type
-	if(selector_->GetSelectMode()==SELECTOR)
+	if (selector_->GetSelectMode() == SELECTOR)
 	{
-	this->command_= stageSceneInputHandler_->SelectorHandeleInput(this->selector_);
+		this->command_ = stageSceneInputHandler_->SelectorHandeleInput(this->selector_);
 	}
-	else if(selector_->GetSelectMode()== UNIT)
+	else if (selector_->GetSelectMode() == UNIT)
 	{
-	this->command_= stageSceneInputHandler_->UintHandleInput(selector_->)
+		this->command_ = stageSceneInputHandler_->UintHandleInput(&selector_->GetSelectedUnitAddress());
 	}
 }
 

@@ -33,4 +33,6 @@ public:
 	int GetMapX() const { return mapX_; }
 	int GetMapY() const { return mapY_; }
 	int GetSelectMode() const { return selectMode_; }
+
+	Uint GetSelectedUnitAddress() { return *selectedUint_; }
 };
