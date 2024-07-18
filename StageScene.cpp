@@ -29,6 +29,10 @@ void StageScene::Update(char* keys, char* preKeys)
 	if (this->iCommand_)
 	{
 		iCommand_->Exec(*player_);
+		if(commandHistory_.empty())
+		{
+		commandHistory_.push_back(this->command_);
+		}
 	}
 
 	if (preKeys[DIK_RETURN] && !keys[DIK_RETURN])
