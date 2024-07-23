@@ -16,6 +16,6 @@ void TitleScene::Update(char* keys, char* preKeys)
 
 void TitleScene::Draw()
 {
-	Novice::DrawBox(0, 0, 1280, 720, 0, BLUE, kFillModeSolid);
+	Novice::DrawBox(0, 0, 1280, 720, 0, RED, kFillModeSolid);
 	Novice::ScreenPrintf(0, 0, "TitleScene");
 }

@@ -21,6 +21,7 @@ void Player::Update()
 void Player::Draw() const
 {
 	Novice::DrawBox(int(pos_.x), int(pos_.y), 20, 20, 0.0f, WHITE, kFillModeSolid);
+
 }
 
 void Player::MoveRight()

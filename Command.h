@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include"Player.h"
 
 class Player;
@@ -10,13 +10,13 @@ public:
 	virtual void Exec(Player& player) = 0;
 };
 
-class MoveRightCommand:public ICommand
+class PlayerMoveRightCommand:public ICommand
 {
 public:
 	void Exec(Player&player)override;
 };
 
-class MoveLeftCommand :public ICommand
+class PlayerMoveLeftCommand :public ICommand
 {
 public:
 	void Exec(Player& player)override;

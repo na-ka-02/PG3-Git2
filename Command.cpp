@@ -1,15 +1,16 @@
 #include "Command.h"
 
-void MoveRightCommand::Exec(Player& player)
+ICommand::~ICommand()
+{
+}
+
+void PlayerMoveRightCommand::Exec(Player& player)
 {
 	player.MoveRight();
 }
 
-void MoveLeftCommand::Exec(Player& player)
+void PlayerMoveLeftCommand::Exec(Player& player)
 {
 	player.MoveLeft();
 }
 
-ICommand::~ICommand()
-{
-}

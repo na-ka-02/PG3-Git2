@@ -11,13 +11,18 @@ void StageScene::Init()
 	inputHandler_ = new InputHandler();
 
 	//Assign command
-	inputHandler_->AssignMoveLeftCommand2PressKeyD();
+	inputHandler_->AssignMoveRightCommand2PressKeyD();
 	inputHandler_->AssignMoveLeftCommand2PressKeyA();
+	inputHandler_->AssignMoveLeftCommand2PressKeyLeft();
+	inputHandler_->AssignMoveRightCommand2PressKeyRight();
 
 	//New Player
 	player_ = new Player();
-
 	player_->Init();
+
+	//New Enemy
+	enemy_ = new Enemy();
+	enemy_->Init();
 }
 
 void StageScene::Update(char* keys, char* preKeys)
@@ -31,6 +36,8 @@ void StageScene::Update(char* keys, char* preKeys)
 		iCommand_->Exec(*player_);
 	}
 
+	enemy_->Update();
+
 	if (preKeys[DIK_RETURN] && !keys[DIK_RETURN])
 	{
 		sceneNo = CLEAR;
@@ -39,7 +46,8 @@ void StageScene::Update(char* keys, char* preKeys)
 
 void StageScene::Draw()
 {
-	Novice::DrawBox(0, 0, 1280, 720, 0, RED, kFillModeSolid);
+	Novice::DrawBox(0, 0, 1280, 720, 0, BLUE, kFillModeSolid);
 	Novice::ScreenPrintf(0, 0, "StageScene");
 	player_->Draw();
+	enemy_->Draw();
 }
