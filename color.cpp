@@ -14,15 +14,15 @@ unsigned int GetColor(unsigned int red, unsigned int blue, unsigned int green, u
 	return color;
 }
 
-static unsigned int GetColor(Color color) {
-
-	int colorBit = 0;
-
-	color.red <<= 24;
-	color.blue <<= 16;
-	color.green <<= 8;
-
-	colorBit = color.red + color.green + color.blue + color.alpha;
-
-	return colorBit;
-}
+//static unsigned int GetColor(Color color) {
+//
+//	int colorBit = 0;
+//
+//	color.red <<= 24;
+//	color.blue <<= 16;
+//	color.green <<= 8;
+//
+//	colorBit = color.red + color.green + color.blue + color.alpha;
+//
+//	return colorBit;
+//}
