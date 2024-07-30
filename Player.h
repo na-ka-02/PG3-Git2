@@ -17,4 +17,5 @@ public:
 private:
 	Vector3 pos_;
 	float speed_ = 3.0f;
+	bool isPlayerFlag_=false;
 };

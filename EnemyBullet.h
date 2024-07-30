@@ -2,19 +2,20 @@
 #include <list>
 #include <string>
 #include"Vector2.h"
+#include"Player.h"
 
 class EnemyBullet
 {
 public:
-	void Initialize();
+	void Initialize(Vector2 pos);
 	void Update();
 	void Draw();
+	void EnemyBulletCollision(Player* player);
+	bool IsDead() const;
 private:
 	Vector2 pos_;
-	float speed_ = 3.0f;
+	float speed_ = 4.0f;
 	float frame_ = 20.0f;
-	std::list<const float*>bulletList
-	{
-	
-	};
+	bool enemyBulletFlag_ = false;
+	bool isDead_ = false;
 };

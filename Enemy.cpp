@@ -18,3 +18,7 @@ void Enemy::Draw() const
 	Novice::DrawBox(int(pos_.x), int(pos_.y), 20, 20, 0.0f, RED, kFillModeSolid);
 }
 
+void Enemy::EnemyCollition()
+{
+}
+

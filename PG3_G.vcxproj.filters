@@ -159,5 +159,6 @@
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="color.h" />
     <ClInclude Include="EnemyBullet.h" />
+    <ClInclude Include="PlayerBullet.h" />
   </ItemGroup>
 </Project>
