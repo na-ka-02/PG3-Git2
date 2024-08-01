@@ -23,6 +23,9 @@ void StageScene::Init()
 	//New Enemy
 	enemy_ = new Enemy();
 	enemy_->Init();
+
+	//New EnemyBullet
+	enemyBullet_ = new EnemyBullet();
 }
 
 void StageScene::Update(char* keys, char* preKeys)
@@ -36,7 +39,10 @@ void StageScene::Update(char* keys, char* preKeys)
 		iCommand_->Exec(*player_);
 	}
 
-	enemy_->Update();
+	Vector2 enemyPos = enemy_->GetPosition();
+	enemyBullet_->Initialize(enemyPos);
+
+	enemy_->Update(enemyBullet_);
 
 	if (preKeys[DIK_RETURN] && !keys[DIK_RETURN])
 	{
@@ -50,4 +56,5 @@ void StageScene::Draw()
 	Novice::ScreenPrintf(0, 0, "StageScene");
 	player_->Draw();
 	enemy_->Draw();
+	enemyBullet_->Draw();
 }

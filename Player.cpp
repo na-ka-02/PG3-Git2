@@ -33,3 +33,8 @@ void Player::MoveLeft()
 {
 	this->pos_.x -= this->speed_;
 }
+
+bool Player::IsDead()
+{
+	return isPlayerDeadFlag_;
+}

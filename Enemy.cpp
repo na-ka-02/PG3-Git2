@@ -3,14 +3,17 @@
 
 void Enemy::Init()
 {
-	pos_.x = 30.0f;
-	pos_.y = 600.0f;
+	pos_ = { 30.0f, 600.0f };
 }
 
-void Enemy::Update()
+void Enemy::Update(EnemyBullet* enemyBullet)
 {
-	pos_.x += speed_;
-	Return(min, max);
+	if (isEnemyDeadFlag_ == false)
+	{
+		pos_.x += speed_;
+		Return(min, max);
+		enemyBullet->Update();
+	}
 }
 
 void Enemy::Draw() const
@@ -20,5 +23,10 @@ void Enemy::Draw() const
 
 void Enemy::EnemyCollition()
 {
+}
+
+Vector2 Enemy::GetPosition()
+{
+	return pos_;
 }
 

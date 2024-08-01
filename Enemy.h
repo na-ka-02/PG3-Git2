@@ -1,22 +1,24 @@
 ﻿#pragma once
-#include"Vector3.h"
+#include"Vector2.h"
+#include"EnemyBullet.h"
 
 class Enemy
 {
 public:
 	void Init();
-	void Update();
+	void Update(EnemyBullet* enemyBullet);
 	void Draw() const;
 	void EnemyCollition();
+	Vector2 GetPosition();
 	//跳ね返り処理
 	template<typename position> position Return(position min, position max);
 
-
 private:
-	Vector3 pos_;
+	Vector2 pos_;
 	float speed_ = 3.0f;
 	float min = 10;
 	float max = 1270;
+	bool isEnemyDeadFlag_ = false;
 };
 
 template<typename position>

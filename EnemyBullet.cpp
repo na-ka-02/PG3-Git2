@@ -1,4 +1,4 @@
-#include<Novice.h>
+﻿#include<Novice.h>
 #include "EnemyBullet.h"
 #include <iostream>
 #include <list>
@@ -8,22 +8,22 @@ void EnemyBullet::Initialize(Vector2 pos)
 	pos_ = pos;
 }
 
-void EnemyBullet::Update()
+void EnemyBullet::Update() const
 {
-	std::list<const int>::iterator
+	if (isEnemyDeadFlag_ == false)
+	{
+
+	}
 }
 
 void EnemyBullet::Draw()
 {
-	Novice::DrawEllipse(pos_.x, pos_.y, 7, 7, 0.0f, RED, kFillModeSolid);
+	Novice::DrawEllipse(int(pos_.x + 12.5f), int(pos_.y + 5.0f), 7, 7, 0.0f, BLACK, kFillModeSolid);
 }
 
+//当たり判定
 void EnemyBullet::EnemyBulletCollision(Player* player)
 {
-	isDead_ = true;
+	player->IsDead();
 }
 
-bool EnemyBullet::IsDead() const
-{
-	return isDead_;
-}

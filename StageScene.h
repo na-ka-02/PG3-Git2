@@ -14,6 +14,7 @@ public:
 private:
 	InputHandler* inputHandler_ = nullptr;
 	ICommand* iCommand_ = nullptr;
-	Player* player_;
-	Enemy* enemy_;
+	Player* player_ = nullptr;
+	Enemy* enemy_ = nullptr;
+	EnemyBullet* enemyBullet_ = nullptr;
 };

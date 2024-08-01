@@ -1,5 +1,5 @@
 ﻿#pragma once
-#include"Vector3.h"
+#include"Vector2.h"
 
 class Player
 {
@@ -9,13 +9,14 @@ public:
 	void Init();
 	void Update();
 	void Draw() const;
+	bool IsDead();
 
 	//メンバ関数
 	void MoveRight();
 	void MoveLeft();
 
 private:
-	Vector3 pos_;
+	Vector2 pos_;
 	float speed_ = 3.0f;
-	bool isPlayerFlag_=false;
+	bool isPlayerDeadFlag_ = false;
 };

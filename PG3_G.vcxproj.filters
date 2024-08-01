@@ -74,6 +74,9 @@
     <ClCompile Include="EnemyBullet.cpp">
       <Filter>KamataEngine</Filter>
     </ClCompile>
+    <ClCompile Include="PlayerBullet.cpp">
+      <Filter>KamataEngine</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C:\KamataEngine\DirectXGame\audio\Audio.h">
@@ -160,5 +163,6 @@
     <ClInclude Include="color.h" />
     <ClInclude Include="EnemyBullet.h" />
     <ClInclude Include="PlayerBullet.h" />
+    <ClInclude Include="Collision.h" />
   </ItemGroup>
 </Project>
