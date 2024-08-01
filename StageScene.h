@@ -16,5 +16,4 @@ private:
 	ICommand* iCommand_ = nullptr;
 	Player* player_ = nullptr;
 	Enemy* enemy_ = nullptr;
-	EnemyBullet* enemyBullet_ = nullptr;
 };

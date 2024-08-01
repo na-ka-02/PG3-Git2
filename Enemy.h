@@ -1,12 +1,11 @@
 ﻿#pragma once
 #include"Vector2.h"
-#include"EnemyBullet.h"
 
 class Enemy
 {
 public:
 	void Init();
-	void Update(EnemyBullet* enemyBullet);
+	void Update();
 	void Draw() const;
 	void EnemyCollition();
 	Vector2 GetPosition();

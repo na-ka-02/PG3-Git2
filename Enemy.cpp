@@ -6,13 +6,12 @@ void Enemy::Init()
 	pos_ = { 30.0f, 600.0f };
 }
 
-void Enemy::Update(EnemyBullet* enemyBullet)
+void Enemy::Update()
 {
 	if (isEnemyDeadFlag_ == false)
 	{
 		pos_.x += speed_;
 		Return(min, max);
-		enemyBullet->Update();
 	}
 }
 
